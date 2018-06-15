@@ -68,7 +68,6 @@ void Reshape<T>::setup_impl(const Variables &inputs, const Variables &outputs) {
 template <class T>
 void Reshape<T>::forward_impl(const Variables &inputs,
                               const Variables &outputs) {
-  // TODO: no need?
   if (inplace_) {
     return;
   }
