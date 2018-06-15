@@ -74,7 +74,7 @@ void Reshape<T>::forward_impl(const Variables &inputs,
   }
 
   const T *x = inputs[0]->get_data_pointer<T>(this->ctx_);
-  T *y = outputs[0]->cast_data_and_get_pointer<T>(this->ctx_, !inplace_);
+  T *y = outputs[0]->cast_data_and_get_pointer<T>(this->ctx_, true);
   for (int s = 0; s < inputs[0]->size(); s++) {
     y[s] = x[s];
   }
